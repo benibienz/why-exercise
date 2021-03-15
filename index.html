@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Plotting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.7/xlsx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource"></script>
+
+    <!-- Slider -->
+    <link href="nouislider/nouislider.css" rel="stylesheet" />
+    <script src="nouislider/nouislider.js"></script>
+
+    <!-- Project styles and font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/palette.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/slider.css" rel="stylesheet" />
+    <link href="css/mobile.css" rel="stylesheet" />
+
+    <!-- Project scripts -->
+    <script src="js/script.js" defer></script>
+
+    <title>Why exercise?</title>
+  </head>
+
+  <body class="blue-1">
+    <header class="centered-flex blue-4">
+      <h1>Why exercise?</h1>
+    </header>
+
+    <section>
+      <div class="centered-flex blue-3">
+        <h2>Move the slider to see how exercise affects health outcomes</h2>
+      </div>
+      <div class="centered-flex" style="flex-grow: 1">
+        <div id="card-grid" class="not-full-width">
+          <!-- Slider -->
+          <div class="card blue-2">
+            <div class="card-title blue-4">Set weekly exercise target</div>
+            <div class="centered-flex">
+              <div id="slider-layout">
+                <div id="slider"></div>
+              </div>
+              <div class="metric">
+                <div id="met" class="number blue-4">0</div>
+                <div class="vert-flex">
+                  <span class="card-text">MET Hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div id="plot-card" class="card" style="background-color: whitesmoke">
+            <div id="plot-layout">
+              <canvas id="plot"></canvas>
+            </div>
+          </div>
+
+          <!-- MET equivalents -->
+          <div id="met-card" class="card blue-2">
+            <div class="card-title blue-4">This is equivalent to...</div>
+            <div class="spaced-between-flex">
+              <div class="metric">
+                <div id="light-exercise" class="number blue-4">0</div>
+                <div class="vert-flex">
+                  <span class="card-text">Hours of walking</span>
+                </div>
+              </div>
+              <div class="metric">
+                <div id="moderate-exercise" class="number blue-4">0</div>
+                <div class="vert-flex">
+                  <span class="card-text">Hours of jogging</span>
+                </div>
+              </div>
+              <div class="metric">
+                <div id="vigorous-exercise" class="number blue-4">0</div>
+                <div class="vert-flex">
+                  <span class="card-text">Hours of running</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mortality risks -->
+          <div id="risk-card" class="card blue-2">
+            <div class="card-title blue-4">Effect on mortality risks</div>
+
+            <div class="spaced-flex">
+              <div class="metric">
+                <div id="stroke" class="number blue-4">-0%</div>
+                <div class="vert-flex">
+                  <span class="card-text">Stroke</span>
+                </div>
+              </div>
+              <div class="metric">
+                <div id="ihd" class="number blue-4">-0%</div>
+                <div class="vert-flex">
+                  <span class="card-text"> Heart<br />Disease </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="spaced-flex">
+              <div class="metric">
+                <div id="diabetes" class="number blue-4">-0%</div>
+                <div class="vert-flex">
+                  <span class="card-text">Diabetes</span>
+                </div>
+              </div>
+              <div class="metric">
+                <div id="breastCancer" class="number blue-4">-0%</div>
+                <div class="vert-flex">
+                  <span class="card-text"> Breast<br />Cancer </span>
+                </div>
+              </div>
+              <div class="metric">
+                <div id="colonCancer" class="number blue-4">-0%</div>
+                <div class="vert-flex">
+                  <span class="card-text">Colon<br />Cancer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="centered-flex">
+      <div class="spaced-between-flex some-padding not-full-width">
+        <div class="not-full-width">
+          Source: Physical activity and risk of breast cancer, colon cancer,
+          diabetes, ischemic heart disease, and ischemic stroke events:
+          systematic review and dose-response meta-analysis for the Global
+          Burden of Disease Study 2013
+        </div>
+        <div class="card blue-4">
+          <a class="link" href="about.html">About this site ⟶ </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

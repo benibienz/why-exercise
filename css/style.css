@@ -1,0 +1,150 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.06em;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Typography */
+h1 {
+  font-size: 32px;
+  color: white;
+  letter-spacing: 0.12em;
+  margin: 0.5rem;
+}
+
+h2 {
+  font-size: 28px;
+  color: whitesmoke;
+  margin: 0.5rem;
+}
+
+.card-title {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 10px 10px 0% 0%;
+}
+
+.card-text {
+  font-size: 20px;
+  margin: 0 1.5vh;
+  display: block;
+  color: black;
+}
+
+.number {
+  font-size: 32px;
+  display: inline-block;
+  min-height: 1.1em;
+  min-width: 1.3em;
+  line-height: 1.1em;
+  text-align: center;
+  padding: 0.1em 0.5em;
+  border-radius: 5px;
+  color: #ec5a43;
+}
+
+/* Layout */
+body,
+section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#card-grid {
+  display: grid;
+  grid-template-columns: 1fr 60%;
+  gap: 2vh;
+  margin: 2vh;
+}
+
+#slider-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2em;
+  width: 80%;
+}
+
+#plot-layout {
+  height: 100%;
+  min-height: 50vh;
+}
+
+.metric {
+  display: flex;
+  padding: 1vh;
+}
+
+.card {
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+
+#plot-card {
+  grid-row: span 3;
+}
+
+#risk-card {
+  max-width: 100%;
+}
+
+.link {
+  margin: 0.5em;
+  font-size: inherit;
+  color: white;
+  text-decoration: none;
+  background-color: inherit;
+  /* from https://stackoverflow.com/a/16683228 */
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.link:hover {
+  color: orangered;
+}
+
+/* Utility classes */
+.centered-flex {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.spaced-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.spaced-between-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vert-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.some-padding {
+  padding: 2em;
+}
+
+.not-full-width {
+  width: 85%;
+}
+
+/* About page */
+#about {
+  padding: 1em;
+  background-color: whitesmoke;
+  width: 80%;
+  font-size: 24px;
+}
